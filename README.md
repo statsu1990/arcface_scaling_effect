@@ -1,2 +1,8 @@
-# arcface_scaling_effect
-Effect of Arcface scaling.
+# Arcfaceのスケーリングの影響をCifar10で確認する。
+sが小さいと性能が明らかに低くなった。sが小さい場合に勾配が小さくなることが原因だと考えられる。
+- Arcfaceなし
+  - tr_loss:28.105159789323807, tr_acc:0.9496794871794871, ts_loss:15.983343750238419, ts_acc:0.8881
+- Arcfaceあり, s=1
+  - tr_loss:307.3714872598648, tr_acc:0.6357572115384615, ts_loss:64.37207841873169, ts_acc:0.6053
+- Arcfaceあり, s=64
+  - tr_loss:28.318743254989386, tr_acc:0.9489182692307693, ts_loss:16.825588554143906, ts_acc:0.8813
